@@ -33,7 +33,7 @@ Ensure you have the following installed:
 1. Navigate to the frontend directory:
 
    ```bash
-   cd frontend
+   cd Frontend
    npm i axios notistack
    npm i react-dom react-icons react-router-dom
    npm run dev
@@ -44,7 +44,7 @@ Ensure you have the following installed:
 1. Navigate to the backend directory:
 
    ```bash
-   cd frontend
+   cd Backend
    npm i express cors mongoose
    nodemon index.js
    ```
