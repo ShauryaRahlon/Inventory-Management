@@ -1,0 +1,206 @@
+/* Chakra-inspired CSS with sexy hover effects */
+
+:root {
+    --chakra-1: #eb3461;
+    /* Root */
+    --chakra-2: #f27121;
+    /* Sacral */
+    --chakra-3: #e94057;
+    /* Solar Plexus */
+    --chakra-4: #8a2387;
+    /* Heart */
+    --chakra-5: #21d4fd;
+    /* Throat */
+    --chakra-6: #b721ff;
+    /* Third Eye */
+    --chakra-7: #08aeea;
+    /* Crown */
+}
+
+body {
+    background: #1a202c;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.viewProduct {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+}
+
+.viewProduct:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
+}
+
+.viewTitle,
+.viewSku,
+.viewQuant,
+.viewPrice {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.viewTitle {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.viewSku {
+    font-size: 1.2em;
+}
+
+.viewQuant {
+    font-size: 1.4em;
+}
+
+.viewPrice {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.viewTitle::before,
+.viewSku::before,
+.viewQuant::before,
+.viewPrice::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            var(--chakra-1), var(--chakra-2), var(--chakra-3),
+            var(--chakra-4), var(--chakra-5), var(--chakra-6),
+            var(--chakra-7));
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.viewTitle:hover::before,
+.viewSku:hover::before,
+.viewQuant:hover::before,
+.viewPrice:hover::before {
+    top: 0;
+    opacity: 0.7;
+}
+
+.viewTitle:hover,
+.viewSku:hover,
+.viewQuant:hover,
+.viewPrice:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Chakra symbol animation on hover */
+@keyframes chakraSpin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.viewTitle::after,
+.viewSku::after,
+.viewQuant::after,
+.viewPrice::after {
+    content: '☸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2em;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.viewTitle:hover::after,
+.viewSku:hover::after,
+.viewQuant:hover::after,
+.viewPrice:hover::after {
+    opacity: 0.7;
+    animation: chakraSpin 4s linear infinite;
+}
+
+/* Pulsating aura effect */
+@keyframes pulseAura {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
+
+.viewProduct:hover {
+    animation: pulseAura 2s infinite;
+}
+
+/* Energetic particles */
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.viewProduct::before {
+    content: '•';
+    position: absolute;
+    color: var(--chakra-5);
+    font-size: 1.5em;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.viewProduct:hover::before {
+    opacity: 0.6;
+    animation: particleFloat 3s ease-in-out infinite;
+}
+
+.viewProduct::before:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.viewProduct::before:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.viewProduct::before:nth-child(3) {
+    bottom: 15%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.viewProduct::before:nth-child(4) {
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 1.5s;
+}

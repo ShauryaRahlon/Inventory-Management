@@ -1,0 +1,84 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.deleteP {
+  color: #ff9900;
+  /* Bright orange color */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #ff9900, 0 0 10px #ff9900;
+  /* Simple neon glow effect */
+}
+
+.deleteP1 {
+  color: #ff9900;
+  /* Bright orange color */
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.delBut {
+  background-color: #ff9900;
+  /* Bright orange button */
+  color: #ffffff;
+  /* White text */
+  border: none;
+  padding: 12px 24px;
+  /* Larger padding for a more prominent button */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px auto;
+  /* Centers the button horizontally */
+  display: block;
+  /* Centers the button */
+  box-shadow: 0 0 8px #ff9900;
+  /* Simple neon glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delBut:hover {
+  background-color: #e68a00;
+  /* Darker orange on hover */
+  transform: translateY(-2px);
+  /* Slightly raises the button on hover */
+  box-shadow: 0 0 12px #e68a00;
+  /* Intensifies the glow on hover */
+}
+
+.letra {
+  font-size: 3rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.6rem;
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #f7f7f7;
+}
+
+.letra:hover {
+  color: #e68a00;
+  color: #e68a00;
+  transform: scale(1.5);
+  text-shadow: 0 0 5px #db9421, 0 0 25px #a26508;
+}
